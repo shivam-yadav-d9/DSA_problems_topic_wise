@@ -5,6 +5,7 @@
 
 // public class problem7 {
 
+
 //     public static void main(String[] args) {
 //         Scanner scanner = new Scanner(System.in);
 //         System.out.println("Enter the size of the array:");
@@ -18,7 +19,7 @@
 //         }
 
 //         boolean check = isSorted(arr);
-//         if (check) {
+//         if (check != false) {
 //             System.out.println("Array sorted");
 //         } else {
 //             System.out.println("not sorted");
@@ -32,7 +33,7 @@
 //                 return false;
 //             }
 //         }
-//         return true;
+//         return check;
 //     }
 
 // }
@@ -75,36 +76,34 @@
 
 // 3.//return first and second largest number in array
 
+import java.util.Scanner;
+import java.util.Arrays;
 
-// import java.util.Scanner;
-// import java.util.Arrays;
+public class problem7{
 
-// public class problem7{
-// j
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in); // Create a Scanner object to read input
+        System.out.println("Enter the size of the array:");
 
-//     public static void main(String[] args) {
-//         Scanner scanner = new Scanner(System.in); // Create a Scanner object to read input
-//         System.out.println("Enter the size of the array:");
+        int size = scanner.nextInt();   // or takin size of arrays // Read the size of the array
+        int[] arr = new int[size]; // Initialize the array with size ;
 
-//         int size = scanner.nextInt(); // Read the size of the array
-//         int[] arr = new int[size]; // Initialize the array
+        System.out.println("Enter the elements of the array:");
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = scanner.nextInt(); // Read each element of the array
+        }
 
-//         System.out.println("Enter the elements of the array:");
-//         for (int i = 0; i < arr.length; i++) {
-//             arr[i] = scanner.nextInt(); // Read each element of the array
-//         }
-
-//         int[] ans = SmallestLargest(arr);
-//         System.out.println("smallest "+ans[0]);
-//         System.out.println("smallest "+ans[1]);
+        int[] ans = SmallestLargest(arr);
+        System.out.println("smallest "+ans[0]);
+        System.out.println("smallest "+ans[1]);
     
-//     }
+    }
 
-//     public  static int[] SmallestLargest(int[] arr){
-//         Arrays.sort(arr);
-//         int[] ans = {arr[0],arr[arr.length -1]};
-//         return ans;
-//     }
-// }
+    public  static int[] SmallestLargest(int[] arr){
+        Arrays.sort(arr);
+        int[] ans = {arr[0],arr[arr.length -1]};
+        return ans;
+    }
+}
 
 

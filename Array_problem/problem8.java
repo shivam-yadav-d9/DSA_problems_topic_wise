@@ -21,8 +21,6 @@ public class problem8 {
         System.out.println(TargetSum(arr, target));
 
     }
-
-
     public static int TargetSum(int[] arr , int target){
         int n = arr.length;
         int count = 0;

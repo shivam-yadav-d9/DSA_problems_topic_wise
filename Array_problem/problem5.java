@@ -5,18 +5,21 @@
 //       Scanner sc = new Scanner(System.in);
 //       System.out.println("enter your size");
 //       int size = sc.nextInt();
-//       int[] arr = new int[size];   // This line initializes an array named arr with the size provided by the user.
+      
+//       int[] arr = new int[size];     // Initialized an array named arr with size;
 
-//       for(int i=0; i<size; i++){    // This for loop iterates over the array and prints
+//       for(int i=0; i<size; i++){     // for loop iterate over the array and  assign input value;
 //         arr[i] = sc.nextInt();
 
 //       }
 //       for(int i=0;i<size;i++){
-//         System.out.println("your element is:" + arr[i]);
+//         System.out.println("your element is:" + arr[i]);           // for loop iterate over the array and print the value
 //       }
 
 //     }
-// 
+// }
+
+
 
 // 2  
 // In Java, arrays are reference types, meaning arr1 and arr2 are references pointing to the same array. When you initialize arr2 to arr1, both references point to the same memory location. As a result, any changes you make to the array through arr2 will directly affect arr1 and vice versa.
