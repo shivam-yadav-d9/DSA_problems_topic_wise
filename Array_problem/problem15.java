@@ -1,3 +1,5 @@
+
+
 import java.util.Scanner;
 
 // public class problem15 {
@@ -63,13 +65,13 @@ public class problem15 {
         }
     }
 
-    public static void revere(int[] arr, int start, int end){
-        while (start < end) {
-            int temp = arr[start];
-            arr[start] = arr[end];
-            arr[end] = temp;
-            start++;
-            end--;
+    public static void revere(int[] arr, int i, int j){
+        while (i < j) {
+            int temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+            i++;
+            j--;
         }
     }
 

@@ -1,3 +1,5 @@
+// return the first repeated value in the arrays
+
 import java.util.Scanner;
 
 public class problem12 {

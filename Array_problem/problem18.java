@@ -12,47 +12,47 @@ public class problem18 {
             arr[i] = scanner.nextInt();
         }
 
-        sortDecreasing(arr);
+         int[] result = sortDecreasing(arr);
         System.out.println("result is : ");
-        for (int num : arr) {
+        for (int num : result) {
             System.out.println(num + " ");
         }
     }
 
-    public static void swap(int[] arr, int i, int j) {
-        int temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp;
+    // public static void swap(int[] arr, int i, int j) {
+    //     int temp = arr[i];
+    //     arr[i] = arr[j];
+    //     arr[j] = temp;
 
-    }
-    public static void revere(int[] arr){
-        int i=0, j= arr.length-1;
-        while (i < j) {
-            swap(arr, i, j);
-            i++;
-            j--;
+    // }
+    // public static void revere(int[] arr){
+    //     int i=0, j= arr.length-1;
+    //     while (i < j) {
+    //         swap(arr, i, j);
+    //         i++;
+    //         j--;
             
-        }
+    //     }
 
-    }
+    // }
 
     public static int[] sortDecreasing(int[] arr) {
         int n = arr.length;
-        int left = 0, right = n - 1;
+        int i = 0, j = n - 1;
         int[] arrDec = new int[n];
-        int k = 0;
+        int k = n-1;
 
-        while (left <= right) {
-            if (Math.abs(arr[left]) > Math.abs(arr[right])) {
-                arrDec[k++] = arr[left] * arr[left];
-                left++;
+        while (i <= j) {
+            if (Math.abs(arr[i]) > Math.abs(arr[j])) {
+                arrDec[k--] = arr[i] * arr[i];
+                i++;
 
             } else {
-                arr[k++] = arr[right] * arr[right];
-                right--;
+                arrDec[k--] = arr[j] * arr[j];
+                j--;
             }
 
         }
-        revere(arrDec);
+        return arrDec;
     }
 }
